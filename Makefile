@@ -1,7 +1,7 @@
 PLYMOUTH_DIR=/usr/share/plymouth/themes
 THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
 
-build: $(patsubst %,dist/%.png, $(shell find src -type f -name '*.png' -exec basename '{}' .png ';')) dist/tux.script dist/tux.plymouth dist/tux.png dist/background.png
+build: $(patsubst %,dist/%.png, $(shell find src -type f -name '*.png' -exec basename '{}' .png ';')) dist/tux.script dist/tux.plymouth dist/tux.png dist/passw-dialog.png dist/background.png
 
 dist/tux.script: src/tux.script
 	@mkdir -pv dist
@@ -13,7 +13,11 @@ dist/tux.plymouth: src/tux.plymouth
 
 dist/tux.png: src/tux.svg
 	@mkdir -pv dist
-	inkscape src/tux.svg -o dist/tux.png -w 202
+	inkscape $< -o $@ -w 202
+	
+dist/passw-dialog.png: src/passw-dialog.svg
+	@mkdir -pv dist
+	inkscape $< -o $@ -w 270
 
 dist/background.png:
 	@mkdir -pv dist
