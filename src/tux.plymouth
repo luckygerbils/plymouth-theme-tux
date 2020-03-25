@@ -1,11 +1,8 @@
 [Plymouth Theme]
 Name=Tux
-Description=Theme displaying a Tux logo.
+Description=A theme that features a certain penguin.
 ModuleName=script
 
 [script]
 ImageDir=/usr/share/plymouth/themes/tux
 ScriptFile=/usr/share/plymouth/themes/tux/tux.script
-
-[script-env-vars]
-example_env_var=example env var value
