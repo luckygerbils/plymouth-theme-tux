@@ -9,7 +9,7 @@ dist/tux.script: src/tux.script
 
 dist/tux.plymouth: src/tux.plymouth
 	@mkdir -pv dist
-	@cp -v -u src/tux.plymouth dist/
+	@sed "s,\$${THEME_INSTALL_DIR},${THEME_INSTALL_DIR}," "$<" >"$@"
 
 dist/tux.png: src/tux.svg
 	@mkdir -pv dist

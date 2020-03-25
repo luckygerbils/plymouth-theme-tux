@@ -4,5 +4,5 @@ Description=A theme that features a certain penguin.
 ModuleName=script
 
 [script]
-ImageDir=/usr/share/plymouth/themes/tux
-ScriptFile=/usr/share/plymouth/themes/tux/tux.script
+ImageDir=${THEME_INSTALL_DIR}
+ScriptFile=${THEME_INSTALL_DIR}/tux.script
