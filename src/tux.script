@@ -33,7 +33,7 @@ screen_y = Window.GetY();
 /*
  * Images */
 
-background_image = Image("wallpaper.png");
+background_image = Image("background.png");
 passw_dialog_input_image = Image("passw-dialog.png");
 bullet_image = Image("test.png");
   
