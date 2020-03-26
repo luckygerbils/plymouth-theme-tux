@@ -31,7 +31,7 @@ dist/bullet.png: src/bullet.svg
 
 dist/background.png:
 	@mkdir -pv dist
-	convert -size 2560x1600 -define gradient:center=1536,960 radial-gradient:#333-#222 -spread 50 dist/background.png
+	convert -size 2560x1600 -define gradient:center=1536,960 radial-gradient:#333-#222 -spread 50 "$@"
 
 dist/%.png: src/%.png
 	@mkdir -pv dist
