@@ -112,7 +112,7 @@ fun debugOutput(str) {
     /*
      * This will print to the top left corner
      */
-    debug_sprite.SetImage(Image.Text(str));
+    debug_sprite.SetImage(Image.Text(str, 1, 1, 1, 1, "Mono 8"));
 }
 
 /**/
