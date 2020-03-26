@@ -37,7 +37,7 @@ screen_y = Window.GetY();
 
 background_image = Image("background.png");
 passw_dialog_input_image = Image("passw-dialog.png");
-bullet_image = Image("test.png");
+bullet_image = Image("bullet.png");
 
 tux_image = Image("tux.png");
 progress_meter_image = Image("progress-meter.png");
