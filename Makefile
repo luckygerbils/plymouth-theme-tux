@@ -7,7 +7,8 @@ build: $(patsubst %,dist/%.png, $(shell find src -type f -name '*.png' -exec bas
 	dist/tux.png \
 	dist/passw-dialog.png \
 	dist/background.png \
-	dist/bullet.png
+	dist/bullet.png \
+	dist/spinner.png
 
 dist/tux.script: src/tux.script
 	@mkdir -pv dist
@@ -28,6 +29,10 @@ dist/passw-dialog.png: src/passw-dialog.svg
 dist/bullet.png: src/bullet.svg
 	@mkdir -pv dist
 	inkscape $< -o "$@" -w 10
+
+dist/spinner.png: src/spinner.svg
+	@mkdir -pv dist
+	inkscape $< -o "$@" -w 220
 
 dist/background.png:
 	@mkdir -pv dist

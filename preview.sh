@@ -4,7 +4,7 @@
 #
 set -eu
 
-DURATION="${1:-5}"
+DURATION="${1:-10}"
 COMMAND="${2:-wait}"
 
 plymouthd --debug --debug-file=/home/sanasta/documents/plymouthd.log
@@ -25,7 +25,7 @@ plymouth show-splash
 
 case $COMMAND in
 wait)
-    sleep $DURATION
+    sleep $((DURATION/2))
     ;;
 status)
     for i in $(seq 1 $DURATION); do
