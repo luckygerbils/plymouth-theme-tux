@@ -40,7 +40,6 @@ passw_dialog_input_image = Image("passw-dialog.png");
 bullet_image = Image("bullet.png");
 
 tux_image = Image("tux.png");
-progress_meter_image = Image("progress-meter.png");
 progress_fade_image = Image("progress-fade.png");
 fsck_progress_meter_image = Image("progress-meter.png");
 fsck_progress_fade_image = Image("fsck-fade.png");
@@ -84,7 +83,7 @@ msg_label_sprite = Sprite();
 
 counter = 0;
 
-fade_pos_x = (screen_width / 2) - (progress_meter_image.GetWidth() / 2);
+fade_pos_x = (screen_width / 2) - (fsck_progress_meter_image.GetWidth() / 2);
 fade_dir = 0; /* 0 = right, 1 = left */
 
 fsck_running = 0;
@@ -121,8 +120,8 @@ fun debugOutput(str) {
  * Setup the graphics properties
  */
 tux_sprite.SetPosition(screen_x + (screen_width / 2) - (tux_image.GetWidth() / 2), screen_y + (screen_height / 2) - (tux_image.GetHeight() / 2) - 100);
-fsck_progress_meter_sprite.SetPosition(screen_x + (screen_width / 2) - (progress_meter_image.GetWidth() / 2), screen_y + (screen_height / 2) + (tux_image.GetHeight() / 2) + 25);
-fsck_progress_fade_sprite.SetPosition(screen_x + (screen_width / 2) - (progress_meter_image.GetWidth() / 2), screen_y + (screen_height / 2) + (tux_image.GetHeight() / 2) + 25);
+fsck_progress_meter_sprite.SetPosition(screen_x + (screen_width / 2) - (fsck_progress_meter_image.GetWidth() / 2), screen_y + (screen_height / 2) + (tux_image.GetHeight() / 2) + 25);
+fsck_progress_fade_sprite.SetPosition(screen_x + (screen_width / 2) - (fsck_progress_meter_image.GetWidth() / 2), screen_y + (screen_height / 2) + (tux_image.GetHeight() / 2) + 25);
 fsck_progress_meter_sprite.SetOpacity(0);
 fsck_progress_fade_sprite.SetOpacity(0);
 passw_dialog_input_sprite.SetPosition(screen_x + (screen_width / 2) - (passw_dialog_input_image.GetWidth() / 2), screen_y + (screen_height / 2) + (tux_image.GetHeight() / 2) + 70);
