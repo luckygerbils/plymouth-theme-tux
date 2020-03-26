@@ -40,7 +40,6 @@ passw_dialog_input_image = Image("passw-dialog.png");
 bullet_image = Image("bullet.png");
 
 tux_image = Image("tux.png");
-progress_fade_image = Image("progress-fade.png");
 fsck_progress_meter_image = Image("progress-meter.png");
 fsck_progress_fade_image = Image("fsck-fade.png");
 
