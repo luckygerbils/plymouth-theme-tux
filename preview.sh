@@ -43,6 +43,14 @@ message)
         sleep 0.5
     done
     ;;
+progress)
+    for i in $(seq 0 $DURATION); do
+        percentage=$((100/DURATION*i))
+        echo "system-update: $percentage"
+        plymouth system-update --progress="$percentage"
+        sleep 0.5
+    done
+    ;;
 password)
     plymouth ask-for-password -command=echo --prompt=Password
     sleep $DURATION
