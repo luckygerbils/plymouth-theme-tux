@@ -4,5 +4,5 @@ Description=A theme that features a certain penguin.
 ModuleName=script
 
 [script]
-ImageDir=${THEME_INSTALL_DIR}
+ImageDir=${THEME_INSTALL_DIR}/img
 ScriptFile=${THEME_INSTALL_DIR}/tux.script

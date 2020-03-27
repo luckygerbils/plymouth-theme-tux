@@ -1,0 +1,73 @@
+#pragma once
+
+module.bullet_image = Image("bullet.png");
+
+module.prompt_sprite;
+module.input_sprite;
+module.stars_sprite;
+
+module.stars_array;
+module.stars_n = 0;
+module.position;
+
+/**
+ * Set up the password input. Centered horizontally at position[0], top at position[1], base z-index of position[2]
+ */
+fun create_input(dialog_input_image, position) {
+    module.position = position;
+    
+    module.input_sprite = Sprite(dialog_input_image);
+    module.input_sprite.SetOpacity(0);
+    module.input_sprite.SetZ(position[2]);
+    
+    module.prompt_sprite = Sprite();
+    module.prompt_sprite.SetOpacity(0);
+    module.prompt_sprite.SetZ(position[2]);
+    
+    module.stars_sprite = Sprite();
+    module.stars_sprite.SetOpacity(0);
+    module.stars_sprite.SetZ(position[2] + 1);
+}
+
+fun display_password(prompt, stars) {
+    prompt_image = Image.Text(prompt, 1, 1, 1);
+    
+    // Prompt text displays at top
+    module.prompt_sprite.SetImage(prompt_image);
+    module.prompt_sprite.SetX(module.position[0] - prompt_image.GetWidth()/2);
+    module.prompt_sprite.SetY(module.position[1]);
+    
+    // Input is 10px below prompt
+    module.input_sprite.SetX(module.position[0] - module.input_sprite.GetImage().GetWidth()/2);
+    module.input_sprite.SetY(module.prompt_sprite.GetY() + prompt_image.GetHeight() + 10);
+    
+    // "Stars" are overlayed on input, centered vertically with 5px x-padding (z-index is higher)
+    stars_text = "";
+    for (i = 0; i < stars; i++) {
+        stars_text += "•";
+        // Don't show stars if they would go past the end of the "input" box
+        if (Image.Text(stars_text, 0, 0, 0).GetWidth() > module.input_sprite.GetImage().GetWidth() - 10) {
+            break;
+        }
+    }
+    debug(stars_text);
+    
+    stars_image = Image.Text(stars_text, 0, 0, 0);
+    module.stars_sprite.SetImage(stars_image);
+    module.stars_sprite.SetX(module.input_sprite.GetX() + 5);
+    module.stars_sprite.SetY(module.input_sprite.GetY() + module.input_sprite.GetImage().GetHeight()/2 - stars_image.GetHeight()/2);
+    
+    // Show all
+    module.input_sprite.SetOpacity(1);
+    module.prompt_sprite.SetOpacity(1);
+    module.stars_sprite.SetOpacity(1);
+}
+
+fun display_normal() {
+    module.input_sprite.SetOpacity(0);
+    module.prompt_sprite.SetOpacity(0);
+    module.stars_sprite.SetOpacity(0);
+}
+
+Plymouth.SetDisplayPasswordFunction(display_password);
+Plymouth.SetDisplayNormalFunction(display_normal);

@@ -1,0 +1,11 @@
+#pragma once
+
+/**
+ * Show the logo image centered at (x, y) with z-index of z
+ */
+fun create_logo(logo_image, position) {
+    module.logo_sprite = Sprite(logo_image);
+    module.logo_sprite.SetX(position[0] - logo_image.GetWidth() / 2);
+    module.logo_sprite.SetY(position[1] - logo_image.GetHeight() / 2);
+    module.logo_sprite.SetZ(position[2]);
+}
