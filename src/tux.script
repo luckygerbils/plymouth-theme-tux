@@ -4,9 +4,10 @@
 #include "input.script"
 #include "debug.script"
 
-background_image = Image("background.png");
-logo_image = Image("tux.png");
-dialog_input_image = Image("input.png");
+images.background = Image("background.png");
+images.logo = Image("tux.png");
+images.input = Image("input.png");
+images.spinner = Image("spinner.png");
 
 screen_w = Window.GetWidth();
 screen_h = Window.GetHeight();
@@ -15,8 +16,22 @@ screen_y = Window.GetY();
 center_x = screen_x + screen_w/2;
 center_y = screen_y + screen_h/2;
 
-create_background(background_image, [center_x, center_y, 0]);
+create_background([center_x, center_y, 0], images);
 // Logo 40px above center
-create_logo(logo_image, [center_x, center_y - logo_image.GetHeight()/2 - 40, 1]);
+logo = create_logo([center_x, center_y - images.logo.GetHeight()/2 - 40, 1], images);
 // Input 40px below center
-create_input(dialog_input_image, [center_x, center_y + 40, 1]);
+input = create_input([center_x, center_y + 40, 1], images);
+
+fun onDisplayPassword(prompt, stars) {
+    input.show(prompt, stars);
+    logo.hide_spinner();
+}
+
+fun onDisplayNormal() {
+    input.hide();
+    logo.show_spinner();
+}
+
+Plymouth.SetDisplayPasswordFunction(onDisplayPassword);
+Plymouth.SetDisplayNormalFunction(onDisplayNormal);
+Plymouth.SetRefreshFunction(logo.update_spin);

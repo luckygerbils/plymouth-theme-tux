@@ -4,6 +4,7 @@ THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
 build: dist/tux.script \
 	dist/tux.plymouth \
 	dist/img/tux.png \
+	dist/img/spinner.png \
 	dist/img/input.png \
 	dist/img/background.png
 
@@ -18,6 +19,10 @@ dist/tux.plymouth: src/tux.plymouth
 dist/img/tux.png: src/img/tux.svg
 	@mkdir -pv dist/img
 	inkscape $< -o "$@" -w 202
+
+dist/img/spinner.png: src/img/spinner.svg
+	@mkdir -pv dist/img
+	inkscape $< -o "$@" -w 220
 
 dist/img/input.png: src/img/input.svg
 	@mkdir -pv dist/img

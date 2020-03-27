@@ -3,18 +3,18 @@
 /**
  * Create the background image centered at position
  */
-fun create_background(background_image, position) {
+fun create_background(position, images) {
     window_ratio = Window.GetHeight() / Window.GetWidth();
-    background_ratio = background_image.GetHeight() / background_image.GetWidth();
+    background_ratio = images.background.GetHeight() / images.background.GetWidth();
     
     scale_factor = 0;
     if (window_ratio > background_ratio) {
-        scale_factor = Window.GetHeight() / background_image.GetHeight();
+        scale_factor = Window.GetHeight() / images.background.GetHeight();
     } else {
-        scale_factor = Window.GetWidth() / background_image.GetWidth();
+        scale_factor = Window.GetWidth() / images.background.GetWidth();
     }
 
-    scaled_background_image = background_image.Scale(background_image.GetWidth() * scale_factor, background_image.GetHeight() * scale_factor);
+    scaled_background_image = images.background.Scale(images.background.GetWidth() * scale_factor, images.background.GetHeight() * scale_factor);
     module.background_sprite = Sprite(scaled_background_image);
     module.background_sprite.SetX(position[0] - scaled_background_image.GetWidth() / 2);
     module.background_sprite.SetY(position[1] - scaled_background_image.GetHeight() / 2);

@@ -3,9 +3,44 @@
 /**
  * Show the logo image centered at (x, y) with z-index of z
  */
-fun create_logo(logo_image, position) {
-    module.logo_sprite = Sprite(logo_image);
-    module.logo_sprite.SetX(position[0] - logo_image.GetWidth() / 2);
-    module.logo_sprite.SetY(position[1] - logo_image.GetHeight() / 2);
+fun create_logo(position, images) {
+    module.logo_sprite = Sprite(images.logo);
+    module.logo_sprite.SetX(position[0] - images.logo.GetWidth() / 2);
+    module.logo_sprite.SetY(position[1] - images.logo.GetHeight() / 2);
     module.logo_sprite.SetZ(position[2]);
+    
+    module.spinner_image = images.spinner;
+    module.spinner_sprite = Sprite(images.spinner);
+    module.spinner_sprite.SetX(position[0] - images.spinner.GetWidth() / 2);
+    module.spinner_sprite.SetY(position[1] - images.spinner.GetHeight() / 2);
+    module.spinner_sprite.SetZ(position[2]);
+    
+    logo.update_spin = update_spin;
+    logo.hide_spinner = hide_spinner;
+    return logo;
+}
+
+module.spin = 0;
+
+fun update_spin() {
+    if (module.spinner_sprite.GetOpacity() == 0) {
+        // Don't bother if the spinner is hidden
+        return;
+    }
+    
+    if (module.spin < 3.14 * 2) {
+        module.spin = module.spin + 0.1;
+    } else {
+        module.spin = 0;
+    }
+
+    module.spinner_sprite.SetImage(module.spinner_image.Rotate(module.spin));
+}
+
+fun hide_spinner() {
+    module.spinner_sprite.SetOpacity(0);
+}
+
+fun show_spinner() {
+    module.spinner_sprite.SetOpacity(1);
 }

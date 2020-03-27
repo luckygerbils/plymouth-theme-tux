@@ -13,10 +13,10 @@ module.position;
 /**
  * Set up the password input. Centered horizontally at position[0], top at position[1], base z-index of position[2]
  */
-fun create_input(dialog_input_image, position) {
+fun create_input(position, images) {
     module.position = position;
     
-    module.input_sprite = Sprite(dialog_input_image);
+    module.input_sprite = Sprite(images.input);
     module.input_sprite.SetOpacity(0);
     module.input_sprite.SetZ(position[2]);
     
@@ -27,9 +27,13 @@ fun create_input(dialog_input_image, position) {
     module.stars_sprite = Sprite();
     module.stars_sprite.SetOpacity(0);
     module.stars_sprite.SetZ(position[2] + 1);
+    
+    input.show = show;
+    input.hide = hide;
+    return input;
 }
 
-fun display_password(prompt, stars) {
+fun show(prompt, stars) {
     prompt_image = Image.Text(prompt, 1, 1, 1);
     
     // Prompt text displays at top
@@ -50,7 +54,6 @@ fun display_password(prompt, stars) {
             break;
         }
     }
-    debug(stars_text);
     
     stars_image = Image.Text(stars_text, 0, 0, 0);
     module.stars_sprite.SetImage(stars_image);
@@ -63,11 +66,8 @@ fun display_password(prompt, stars) {
     module.stars_sprite.SetOpacity(1);
 }
 
-fun display_normal() {
+fun hide() {
     module.input_sprite.SetOpacity(0);
     module.prompt_sprite.SetOpacity(0);
     module.stars_sprite.SetOpacity(0);
 }
-
-Plymouth.SetDisplayPasswordFunction(display_password);
-Plymouth.SetDisplayNormalFunction(display_normal);
