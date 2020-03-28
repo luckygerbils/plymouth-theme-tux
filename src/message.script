@@ -1,0 +1,20 @@
+#pragma once
+
+module.message_sprites = [NULL, NULL, NULL, NULL, NULL];
+
+fun create_message_box(position) {
+    module.box_sprite = Sprite();
+    module.box_sprite.SetY(position[1]);
+    module.box_sprite.SetZ(position[2]);
+    
+    module.position = position;
+    
+    message_box.show_message = show_message;
+    return message_box;
+}
+
+fun show_message(message) {
+    message_image = Image.Text(message, 1, 1, 1);
+    module.box_sprite.SetImage(message_image);
+    module.box_sprite.SetX(module.position[0] - message_image.GetWidth()/2);
+}

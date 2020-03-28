@@ -1,37 +1,51 @@
-#define module global[__FILENAME__]
+#define module global[__FILE__]
+
 #include "background.script"
 #include "logo.script"
 #include "input.script"
+#include "message.script"
 #include "debug.script"
 
-images.background = Image("background.png");
-images.logo = Image("tux.png");
-images.input = Image("input.png");
-images.spinner = Image("spinner.png");
+fun create_splash() {
+    images.logo = Image("tux.png");
+    images.background = Image("background.png");
+    images.input = Image("input.png");
+    images.spinner = Image("spinner.png");
 
-screen_w = Window.GetWidth();
-screen_h = Window.GetHeight();
-screen_x = Window.GetX();
-screen_y = Window.GetY();
-center_x = screen_x + screen_w/2;
-center_y = screen_y + screen_h/2;
+    screen_w = Window.GetWidth();
+    screen_h = Window.GetHeight();
+    screen_x = Window.GetX();
+    screen_y = Window.GetY();
+    center_x = screen_x + screen_w/2;
+    center_y = screen_y + screen_h/2;
 
-create_background([center_x, center_y, 0], images);
-// Logo 40px above center
-logo = create_logo([center_x, center_y - images.logo.GetHeight()/2 - 40, 1], images);
-// Input 40px below center
-input = create_input([center_x, center_y + 40, 1], images);
+    create_background([center_x, center_y, 0], images);
+    // Logo 40px above center
+    logo = create_logo([center_x, center_y - images.logo.GetHeight()/2 - 40, 1], images);
+    // Input 40px below center
+    input = create_input([center_x, center_y + 40, 1], images);
+    // Messages 10px below input
+    message_box = create_message_box([center_x, input.y + input.height + 10, 1]);
+    
+    splash.logo = logo;
+    splash.input = input;
+    splash.message_box = message_box;
+    return splash;
+}
+
+splash = create_splash();
 
 fun onDisplayPassword(prompt, stars) {
-    input.show(prompt, stars);
-    logo.hide_spinner();
+    splash.input.show(prompt, stars);
+    splash.logo.hide_spinner();
 }
 
 fun onDisplayNormal() {
-    input.hide();
-    logo.show_spinner();
+    splash.input.hide();
+    splash.logo.show_spinner();
 }
 
 Plymouth.SetDisplayPasswordFunction(onDisplayPassword);
 Plymouth.SetDisplayNormalFunction(onDisplayNormal);
-Plymouth.SetRefreshFunction(logo.update_spin);
+Plymouth.SetRefreshFunction(splash.logo.update_spin);
+Plymouth.SetMessageFunction(splash.message_box.show_message);

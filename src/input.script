@@ -30,6 +30,8 @@ fun create_input(position, images) {
     
     input.show = show;
     input.hide = hide;
+    input.y = module.position[1];
+    input.height = Image.Text("Sample Prompt", 1, 1, 1).GetHeight() + 10 + images.input.GetHeight();
     return input;
 }
 

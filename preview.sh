@@ -7,10 +7,9 @@ set -eu
 DURATION="${1:-10}"
 COMMAND="${2:-wait}"
 
-plymouthd --debug --debug-file=/home/sanasta/documents/plymouthd.log
+plymouthd --debug
 
 function quit {
-    echo "Quitting"
     plymouth quit
 }
 trap quit EXIT
@@ -21,38 +20,44 @@ while ! plymouth --ping; do
     sleep 1
 done
 
-plymouth show-splash
-
 case $COMMAND in
 wait)
-    sleep $((DURATION/2))
+    sleep $((DURATION))
     ;;
 status)
+    plymouth show-splash
     for i in $(seq 1 $DURATION); do
         message="$(date) $i"
-        echo "update: $message"
+        echo plymouth update --status="$message"
         plymouth update --status="$message"
         sleep 0.5
     done
     ;;
 message)
+    plymouth show-splash
+    plymouth change-mode --boot-up
     for i in $(seq 1 $DURATION); do
         message="$(date) $i"
-        echo "display-message: $message"
+        echo plymouth display-message --text="$message"
         plymouth display-message --text="$message"
         sleep 0.5
     done
     ;;
 progress)
+    plymouth show-splash
+    plymouth system-update --progress="10"
     for i in $(seq 0 $DURATION); do
         percentage=$((100/DURATION*i))
-        echo "system-update: $percentage"
+        echo plymouth system-update --progress="$percentage"
         plymouth system-update --progress="$percentage"
         sleep 0.5
     done
     ;;
 password)
-    plymouth ask-for-password -command=echo --prompt=Password
+    plymouth show-splash
+    plymouth change-mode --boot-up
+    sleep 1
+    cat hello | plymouth ask-for-password --prompt=Password: &
     sleep $DURATION
     ;;
 esac

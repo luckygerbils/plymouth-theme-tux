@@ -1,7 +1,9 @@
 #pragma once
 
+module.debug_str = "";
 module.debug_sprite = Sprite();
 fun debug(str) {
-    module.debug_sprite.SetImage(Image.Text(str, 1, 1, 1, 1, "Mono 8"));
+    module.debug_str += str + "\n";
+    module.debug_sprite.SetImage(Image.Text(module.debug_str, 1, 1, 1, 1, "Mono 8"));
     module.debug_sprite.SetPosition(0, 0, 99);
 }
