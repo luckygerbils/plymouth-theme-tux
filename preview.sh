@@ -53,7 +53,7 @@ progress)
     ;;
 password)
     sleep 1
-    cat hello | plymouth ask-for-password --prompt=Password: &
+    plymouth ask-for-password --prompt=Password: &
     sleep $DURATION
     ;;
 esac

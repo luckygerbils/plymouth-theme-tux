@@ -17,6 +17,7 @@ fun create_logo(position, images) {
     
     logo.update_spin = update_spin;
     logo.hide_spinner = hide_spinner;
+    logo.show_spinner = show_spinner;
     return logo;
 }
 
