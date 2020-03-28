@@ -4,6 +4,7 @@
 #include "logo.script"
 #include "input.script"
 #include "message.script"
+#include "log.script"
 #include "debug.script"
 
 fun create_splash() {
@@ -27,9 +28,12 @@ fun create_splash() {
     // Messages 10px below input
     message_box = create_message_box([center_x, input.y + input.height + 10, 1]);
     
+    log = create_log([center_x, input.y + input.height + 10 + 100, 1]);
+    
     splash.logo = logo;
     splash.input = input;
     splash.message_box = message_box;
+    splash.log = log;
     return splash;
 }
 
@@ -45,7 +49,20 @@ fun onDisplayNormal() {
     splash.logo.show_spinner();
 }
 
+fun onRootMounted() {
+    debug("mounted");
+}
+
+fun onKeyboardInput(c) {
+    if (c == " ") {
+        splash.log.toggle();
+    }
+}
+
 Plymouth.SetDisplayPasswordFunction(onDisplayPassword);
 Plymouth.SetDisplayNormalFunction(onDisplayNormal);
 Plymouth.SetRefreshFunction(splash.logo.update_spin);
 Plymouth.SetMessageFunction(splash.message_box.show_message);
+Plymouth.SetUpdateStatusFunction(splash.log.log_message);
+Plymouth.SetRootMountedFunction(onRootMounted);
+Plymouth.SetKeyboardInputFunction(onKeyboardInput);

@@ -20,12 +20,14 @@ while ! plymouth --ping; do
     sleep 1
 done
 
+plymouth show-splash
+plymouth change-mode --shutdown
+
 case $COMMAND in
 wait)
     sleep $((DURATION))
     ;;
 status)
-    plymouth show-splash
     for i in $(seq 1 $DURATION); do
         message="$(date) $i"
         echo plymouth update --status="$message"
@@ -34,8 +36,6 @@ status)
     done
     ;;
 message)
-    plymouth show-splash
-    plymouth change-mode --boot-up
     for i in $(seq 1 $DURATION); do
         message="$(date) $i"
         echo plymouth display-message --text="$message"
@@ -44,8 +44,6 @@ message)
     done
     ;;
 progress)
-    plymouth show-splash
-    plymouth system-update --progress="10"
     for i in $(seq 0 $DURATION); do
         percentage=$((100/DURATION*i))
         echo plymouth system-update --progress="$percentage"
@@ -54,8 +52,6 @@ progress)
     done
     ;;
 password)
-    plymouth show-splash
-    plymouth change-mode --boot-up
     sleep 1
     cat hello | plymouth ask-for-password --prompt=Password: &
     sleep $DURATION

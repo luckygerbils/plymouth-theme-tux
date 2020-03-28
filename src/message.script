@@ -1,7 +1,8 @@
 #pragma once
 
-module.message_sprites = [NULL, NULL, NULL, NULL, NULL];
-
+/**
+ * Create a box to show the latest message.
+ */
 fun create_message_box(position) {
     module.box_sprite = Sprite();
     module.box_sprite.SetY(position[1]);

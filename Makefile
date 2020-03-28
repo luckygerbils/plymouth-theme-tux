@@ -6,7 +6,8 @@ build: dist/tux.script \
 	dist/img/tux.png \
 	dist/img/spinner.png \
 	dist/img/input.png \
-	dist/img/background.png
+	dist/img/background.png \
+	dist/img/log_background.png
 
 dist/tux.script: $(wildcard src/*.script)
 	@mkdir -pv dist
@@ -31,6 +32,10 @@ dist/img/input.png: src/img/input.svg
 dist/img/background.png:
 	@mkdir -pv dist/img
 	convert -size 2560x1600 -define gradient:center=1536,960 radial-gradient:#333-#222 -spread 50 "$@"
+
+dist/img/log_background.png:
+	@mkdir -pv dist/img
+	convert -size 1x1 xc:black "$@"
 
 clean:
 	@rm -vr dist
