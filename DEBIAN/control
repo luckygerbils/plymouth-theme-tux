@@ -1,0 +1,9 @@
+Package: ${NAME}
+Version: ${VERSION}
+Section: base
+Priority: optional
+Architecture: all
+Depends:
+Maintainer: Sean Anastasi <sean@anasta.si>
+Description: Plymouth Theme Tux
+ A plymouth theme with a classy tux logo.

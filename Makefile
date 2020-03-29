@@ -1,49 +1,62 @@
-PLYMOUTH_DIR=/usr/share/plymouth/themes
+PLYMOUTH_DIR=usr/share/plymouth/themes
 THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
+NAME=plymouth-theme-tux
+VERSION=0.0-0
+PACKAGE=${NAME}_${VERSION}
 
-build: dist/tux.script \
-	dist/tux.plymouth \
-	dist/img/tux.png \
-	dist/img/spinner.png \
-	dist/img/input.png \
-	dist/img/background.png \
-	dist/img/log_background.png \
-	dist/img/lock.png
+${PACKAGE}.deb: ${PACKAGE}
+	@dpkg-deb --verbose --build "${PACKAGE}"
 
-dist/tux.script: $(wildcard src/*.script)
-	@mkdir -pv dist
+${PACKAGE}: \
+	${PACKAGE}/DEBIAN/control \
+	${PACKAGE}/DEBIAN/postinst \
+	${PACKAGE}/DEBIAN/prerm \
+	${PACKAGE}/DEBIAN/postrm \
+	${PACKAGE}/${THEME_INSTALL_DIR}/tux.script \
+	${PACKAGE}/${THEME_INSTALL_DIR}/tux.plymouth \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/tux.png \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/spinner.png \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/input.png \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/background.png \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/log_background.png \
+	${PACKAGE}/${THEME_INSTALL_DIR}/img/lock.png
+
+${PACKAGE}/${THEME_INSTALL_DIR}:
+	@mkdir -pv "${PACKAGE}/${THEME_INSTALL_DIR}"
+
+${PACKAGE}/${THEME_INSTALL_DIR}/tux.script: ${PACKAGE}/${THEME_INSTALL_DIR} $(wildcard src/*.script)
 	@gcc -H -E -I src - <"src/tux.script" -o "$@"
 
-dist/tux.plymouth: src/tux.plymouth
-	@mkdir -pv dist
+${PACKAGE}/${THEME_INSTALL_DIR}/tux.plymouth: src/tux.plymouth ${PACKAGE}/${THEME_INSTALL_DIR}
 	@sed "s,\$${THEME_INSTALL_DIR},${THEME_INSTALL_DIR}," "$<" >"$@"
 
-dist/img/background.png:
-	@mkdir -pv dist/img
+${PACKAGE}/${THEME_INSTALL_DIR}/img:
+	@mkdir -pv "${PACKAGE}/${THEME_INSTALL_DIR}/img"
+
+${PACKAGE}/${THEME_INSTALL_DIR}/img/background.png: ${PACKAGE}/${THEME_INSTALL_DIR}/img
 	convert -size 2560x1600 -define gradient:center=1536,960 radial-gradient:#333-#222 -spread 50 "$@"
 
-dist/img/log_background.png:
-	@mkdir -pv dist/img
+${PACKAGE}/${THEME_INSTALL_DIR}/img/log_background.png: ${PACKAGE}/${THEME_INSTALL_DIR}/img
 	convert -size 1x1 xc:black "$@"
 
-dist/img/%.png: src/img/%.svg
-	@mkdir -pv dist/img
-	inkscape $< -o "$@"
+${PACKAGE}/${THEME_INSTALL_DIR}/img/%.png: src/img/%.svg ${PACKAGE}/${THEME_INSTALL_DIR}/img
+	inkscape "$<" -o "$@"
 
-deb:
-	@cp -rv debian dist/
-	cd dist && dpkg-buildpackage
+${PACKAGE}/DEBIAN/control: DEBIAN/control
+	@mkdir -pv "${PACKAGE}/DEBIAN"
+	@sed "s,\$${VERSION},${VERSION},;s,\$${NAME},${NAME}," "$<" >"$@"
+
+${PACKAGE}/DEBIAN/%: DEBIAN/%
+	@mkdir -pv "${PACKAGE}/DEBIAN"
+	@cp -v "$<" "$@"
 
 clean:
-	@rm -vr dist
+	@rm -vr "${PACKAGE}" "${PACKAGE}.deb"
 
-install: dist
-	@mkdir -pv "${THEME_INSTALL_DIR}"
-	@cp -rv dist/* "${THEME_INSTALL_DIR}"
+install: ${PACKAGE}.deb
+	@sudo dpkg -i "${PACKAGE}.deb"
 
-select:
-	@update-alternatives --install ${PLYMOUTH_DIR}/default.plymouth default.plymouth ${THEME_INSTALL_DIR}/tux.plymouth 100
-	@update-alternatives --config default.plymouth
-	@update-initramfs -u
+uninstall:
+	@sudo apt -y remove "${NAME}"
 
-.PHONY: build clean select install
+.PHONY: build clean install uninstall
