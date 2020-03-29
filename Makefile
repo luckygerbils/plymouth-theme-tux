@@ -18,22 +18,6 @@ dist/tux.plymouth: src/tux.plymouth
 	@mkdir -pv dist
 	@sed "s,\$${THEME_INSTALL_DIR},${THEME_INSTALL_DIR}," "$<" >"$@"
 
-dist/img/tux.png: src/img/tux.svg
-	@mkdir -pv dist/img
-	inkscape $< -o "$@"
-
-dist/img/spinner.png: src/img/spinner.svg
-	@mkdir -pv dist/img
-	inkscape $< -o "$@"
-
-dist/img/input.png: src/img/input.svg
-	@mkdir -pv dist/img
-	inkscape $< -o "$@"
-
-dist/img/lock.png: src/img/lock.svg
-	@mkdir -pv dist/img
-	inkscape $< -o "$@"
-
 dist/img/background.png:
 	@mkdir -pv dist/img
 	convert -size 2560x1600 -define gradient:center=1536,960 radial-gradient:#333-#222 -spread 50 "$@"
@@ -41,6 +25,10 @@ dist/img/background.png:
 dist/img/log_background.png:
 	@mkdir -pv dist/img
 	convert -size 1x1 xc:black "$@"
+
+dist/img/%.png: src/img/%.svg
+	@mkdir -pv dist/img
+	inkscape $< -o "$@"
 
 deb:
 	@cp -rv debian dist/
