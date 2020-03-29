@@ -7,7 +7,7 @@ set -eu
 DURATION="${1:-10}"
 COMMAND="${2:-wait}"
 
-plymouthd
+plymouthd --debug
 
 function quit {
     plymouth quit
