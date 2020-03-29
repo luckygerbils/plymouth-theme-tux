@@ -7,7 +7,7 @@ set -eu
 DURATION="${1:-10}"
 COMMAND="${2:-wait}"
 
-plymouthd --debug
+plymouthd
 
 function quit {
     plymouth quit
@@ -21,7 +21,7 @@ while ! plymouth --ping; do
 done
 
 plymouth show-splash
-plymouth change-mode --shutdown
+#plymouth change-mode --shutdown
 
 case $COMMAND in
 wait)
