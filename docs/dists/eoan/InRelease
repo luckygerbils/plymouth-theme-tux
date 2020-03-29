@@ -4,44 +4,44 @@ Hash: SHA512
 Origin: luckygerbils.github.io/plymouth-theme-tux
 Label: luckygerbils.github.io/plymouth-theme-tux
 Codename: eoan
-Date: Sun, 29 Mar 2020 04:21:25 UTC
+Date: Sun, 29 Mar 2020 04:23:25 UTC
 Architectures: i386 amd64
 Components: main
 Description: A plymouth theme with a classy tux logo.
 MD5Sum:
- 0a7f358b65cf8ae792a52b9184ce29c0 470 main/binary-i386/Packages
- eea0f77642e8de726e6147635d1f9410 344 main/binary-i386/Packages.gz
+ 11ac3c67f4b449dbf4a7c7f270874ffe 470 main/binary-i386/Packages
+ e210cf10a8a45385d3b88342accd021e 345 main/binary-i386/Packages.gz
  49a831aeb8ecbb5cf290297f9ca723c2 188 main/binary-i386/Release
- 0a7f358b65cf8ae792a52b9184ce29c0 470 main/binary-amd64/Packages
- eea0f77642e8de726e6147635d1f9410 344 main/binary-amd64/Packages.gz
+ 11ac3c67f4b449dbf4a7c7f270874ffe 470 main/binary-amd64/Packages
+ e210cf10a8a45385d3b88342accd021e 345 main/binary-amd64/Packages.gz
  8a794e5db6a7af03bec849f9ea600b8f 189 main/binary-amd64/Release
 SHA1:
- 4715501fff5bd20b572ebba8f7f2431be41ea7ea 470 main/binary-i386/Packages
- 307dd1339aa22a3538fafec50ac2791dc661a972 344 main/binary-i386/Packages.gz
+ b743afa664e09049fc2fa5834ef3bce48fdfcb88 470 main/binary-i386/Packages
+ 9782c798f023556f9ef6bbca108f7b57c1b44a39 345 main/binary-i386/Packages.gz
  771cb4f5d2666e4a2453817c1acdf036e9906a63 188 main/binary-i386/Release
- 4715501fff5bd20b572ebba8f7f2431be41ea7ea 470 main/binary-amd64/Packages
- 307dd1339aa22a3538fafec50ac2791dc661a972 344 main/binary-amd64/Packages.gz
+ b743afa664e09049fc2fa5834ef3bce48fdfcb88 470 main/binary-amd64/Packages
+ 9782c798f023556f9ef6bbca108f7b57c1b44a39 345 main/binary-amd64/Packages.gz
  7f65ced543b9a370159b7ac9456e715c0f2e8508 189 main/binary-amd64/Release
 SHA256:
- 81c93b49ffa606ecab83090436ff75c56abf6b54e4b4db8a6b4d73f0acd0b5fc 470 main/binary-i386/Packages
- d273e635bb58ee4ff5dc245457bec246169d17cf347e4618fb1ceebde86a1507 344 main/binary-i386/Packages.gz
+ 158e0b08b9817e24a9225896803b8b358c62ff7e9db94800f6ff03830de1fb0e 470 main/binary-i386/Packages
+ f868e0333e0cd12938731cb5c1e3885c86c2b8e8ee0aea0634ede4003f8b8371 345 main/binary-i386/Packages.gz
  4d907f681aecc5f17df8f1d1a338ea3835166d2e6742413d5a5794ea19532cdf 188 main/binary-i386/Release
- 81c93b49ffa606ecab83090436ff75c56abf6b54e4b4db8a6b4d73f0acd0b5fc 470 main/binary-amd64/Packages
- d273e635bb58ee4ff5dc245457bec246169d17cf347e4618fb1ceebde86a1507 344 main/binary-amd64/Packages.gz
+ 158e0b08b9817e24a9225896803b8b358c62ff7e9db94800f6ff03830de1fb0e 470 main/binary-amd64/Packages
+ f868e0333e0cd12938731cb5c1e3885c86c2b8e8ee0aea0634ede4003f8b8371 345 main/binary-amd64/Packages.gz
  f7065c9199431c001ec2ee6fb83b226320dc2b76f2c444939ff63ba62ae4eaff 189 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEE/y3z+bAhLaLu45TtRX4FqhUb4NgFAl6AIkUACgkQRX4FqhUb
-4Ni/JA//UbrDNQe9O3xFYCS6zH9bkQGUvuhiWw8+1yCWSi7D/p/m9HrcGAS1mFpv
-KWU4TpHa1v4rFzcysJ7qe4edEXC6mZCuPHWH5Wi27IEZ7ou8TvVuoBJN7qsNU/2z
-nmVkSnPrXkTuHmwRUq2p1FTSfrkmL+vesrdshT+RBEl0v+a9gUG6tzPlUKA07A/N
-2Mn7T/KWDhYLx0JJODag6JYPQ5b0dFoVRllQUlKVgYopHgHIxN1FLE99ENwgzpcm
-ZEiQIAjYoS0hHYb8uokT5kneh6xYVdlLXtnVY3ArynMJ1lERPOceelKOcSuoRkHS
-vTp6Wjsv17qSQOq/OBIYvKLJqofgpVSN/H2/NsujWG1rlQoCwUZTqjBBQfx1Dnaw
-JhiBrVvQ+0MC3d5+6PNbPY0/ZZ7CpDdUPskY7Vdo99uVp0ajpBV/6dyiQZPIFxDz
-PJu3W88lB6xc4HQbzhiVwX66InxucOX7PYQhVOKSKIRYBq3u+QkLcIoLzPU+KDrg
-kH67thT270BYaB6OGXBb1FgU/pxFVkHobHwN9f6enw6y81ekoQUy1jbpk6Ki262D
-NHVVhk4CvtF5huLAX2kBJD7J2DAxdudAqGAFQVOaj0JwdlAGs7i6+ih5yMmfoKjR
-DXawizzQJozygix2jcrF3527LDdaCUhGMRjni3TyKH+XcTtCgMs=
-=EL5Q
+iQIzBAEBCgAdFiEE/y3z+bAhLaLu45TtRX4FqhUb4NgFAl6AIr0ACgkQRX4FqhUb
+4NhPDg/+JmMjcFR0CjvBRgKMVXv2glbqd45qr/gYPcP0sFZfh9aM4n79bOuVlzdH
+CprRFt4ATk5YY8WnMmeAz9xZfoRTh/EXgfHe9JtjWRH1nmrK1Zl8M4m46tjpBov7
+5QrohOEAS9/No261Ko7J4CueQPEpoA3tVqCiXUnEEUm+GWsSawscfczO3HpenBQY
+yugpZiYJ3+0J0AwARUAX5v/6qqoTX1Pa2n8PX3OimYclDIeica++RSbzIjzVF8uF
+4dGEORZbMCu6aISamXRm70FzG5G8c9xAbfRz0vnm/Fa7zwpGVywESqbifK1qkzi7
+0B1s1KeYjbzKDP4QDLrJIuvTE1WJzAH/25RlZFhe3wybGC5+qtLSx07BYfeQ7KhQ
+PxH5lb5kcnTya3LibSJbrzdyD/vQkG1KdWRC+4e98dM4qjAUNxp5CnQ0y9P5VDXc
+sQLMJ0zQM4rUWswIEtIVnsAI+VFhqyh+kCZv8wMZocqLxzN+jtOLvsPlxM3ATWdE
++A8rsqL/JpNcMcjJdk62j+NC2SlGospbobPsgO/XV07DQFttSVdG4QVk08Rw1OvC
+fsuas6YivrrsAN/iFIVLwqvEyeu9Rs4at1KEe5NZnJVIAPZTKxxYoDPk3BekkQkM
+8o5f7EVV6LUFhTJKUditMguYUv9WzK1W7PLY0c5tZkfa+QXyY6I=
+=YSCJ
 -----END PGP SIGNATURE-----

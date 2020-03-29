@@ -1,7 +1,7 @@
 PLYMOUTH_DIR=usr/share/plymouth/themes
 THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
 NAME=plymouth-theme-tux
-VERSION=0.0-3
+VERSION=0.0-4
 PACKAGE=${NAME}_${VERSION}
 
 ${PACKAGE}.deb: ${PACKAGE}
@@ -60,7 +60,7 @@ install: ${PACKAGE}
 	@sudo cp -rv "${PACKAGE}/${THEME_INSTALL_DIR}" "/${PLYMOUTH_DIR}"
 
 repo: ${PACKAGE}.deb
-	@reprepro --keepunreferencedfiles --basedir docs includedeb eoan "${PACKAGE}.deb"
+	@reprepro --basedir docs includedeb eoan "${PACKAGE}.deb"
 
 uninstall:
 	@sudo apt -y remove "${NAME}"
