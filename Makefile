@@ -1,7 +1,7 @@
 PLYMOUTH_DIR=usr/share/plymouth/themes
 THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
 NAME=plymouth-theme-tux
-VERSION=0.0-1
+VERSION=0.0-2
 PACKAGE=${NAME}_${VERSION}
 
 ${PACKAGE}.deb: ${PACKAGE}
