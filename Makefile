@@ -62,7 +62,7 @@ install: ${PACKAGE}
 release: ${PACKAGE}.deb
 	@cp -v ${PACKAGE}.deb docs/${PACKAGE}.deb
 	@dpkg-sig -k FF2DF3F9B0212DA2EEE394ED457E05AA151BE0D8 --sign repo docs/${PACKAGE}.deb
-	@apt-ftparchive packages plymouth-theme-tux_0.0-4.deb >docs/Packages
+	@cd docs && apt-ftparchive packages plymouth-theme-tux_0.0-4.deb >Packages
 	@gzip -c docs/Packages >docs/Packages.gz
 	@apt-ftparchive release docs >docs/Release
 	@gpg --default-key FF2DF3F9B0212DA2EEE394ED457E05AA151BE0D8 --clearsign -o docs/InRelease docs/Release
