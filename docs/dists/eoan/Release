@@ -1,19 +1,19 @@
 Origin: luckygerbils.github.io/plymouth-theme-tux
 Label: luckygerbils.github.io/plymouth-theme-tux
 Codename: eoan
-Date: Sun, 29 Mar 2020 03:11:27 UTC
-Architectures: amd64
+Date: Sun, 29 Mar 2020 03:19:34 UTC
+Architectures: i386,amd64
 Components: main
 Description: A plymouth theme with a classy tux logo.
 MD5Sum:
- bda9429fc3a38e6b3d0429d8f44d7371 470 main/binary-amd64/Packages
- 9252cf71d8e5a6d7b77a9b85b1672a44 344 main/binary-amd64/Packages.gz
- 8a794e5db6a7af03bec849f9ea600b8f 189 main/binary-amd64/Release
+ bda9429fc3a38e6b3d0429d8f44d7371 470 main/binary-i386,amd64/Packages
+ 9252cf71d8e5a6d7b77a9b85b1672a44 344 main/binary-i386,amd64/Packages.gz
+ b901db6e6b1cd143ac1951305edfd774 194 main/binary-i386,amd64/Release
 SHA1:
- f978146793f8bb3ca5c61ad68a8e18bf6f02bfff 470 main/binary-amd64/Packages
- 7a3f7c9e00253e4a27507d6c2a23c79d7e9a9554 344 main/binary-amd64/Packages.gz
- 7f65ced543b9a370159b7ac9456e715c0f2e8508 189 main/binary-amd64/Release
+ f978146793f8bb3ca5c61ad68a8e18bf6f02bfff 470 main/binary-i386,amd64/Packages
+ 7a3f7c9e00253e4a27507d6c2a23c79d7e9a9554 344 main/binary-i386,amd64/Packages.gz
+ 8056165703de34c80a08c4e0d89b49d32eab4c20 194 main/binary-i386,amd64/Release
 SHA256:
- fb0eb330a3d2d0d5cb83600e0d12fab2eab232fdc7377845273fc6fdcfd7deaa 470 main/binary-amd64/Packages
- 37296ab62102a3a4fd467dcaef445b415427627dd8e2d8bb16d35ca3ad44dba7 344 main/binary-amd64/Packages.gz
- f7065c9199431c001ec2ee6fb83b226320dc2b76f2c444939ff63ba62ae4eaff 189 main/binary-amd64/Release
+ fb0eb330a3d2d0d5cb83600e0d12fab2eab232fdc7377845273fc6fdcfd7deaa 470 main/binary-i386,amd64/Packages
+ 37296ab62102a3a4fd467dcaef445b415427627dd8e2d8bb16d35ca3ad44dba7 344 main/binary-i386,amd64/Packages.gz
+ e5d7718941f1f21ef5fc64a403f15d89adecd1db0f4866f760fb9df1050b4266 194 main/binary-i386,amd64/Release

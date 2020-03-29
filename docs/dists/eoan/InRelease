@@ -4,35 +4,35 @@ Hash: SHA512
 Origin: luckygerbils.github.io/plymouth-theme-tux
 Label: luckygerbils.github.io/plymouth-theme-tux
 Codename: eoan
-Date: Sun, 29 Mar 2020 03:11:27 UTC
-Architectures: amd64
+Date: Sun, 29 Mar 2020 03:19:34 UTC
+Architectures: i386,amd64
 Components: main
 Description: A plymouth theme with a classy tux logo.
 MD5Sum:
- bda9429fc3a38e6b3d0429d8f44d7371 470 main/binary-amd64/Packages
- 9252cf71d8e5a6d7b77a9b85b1672a44 344 main/binary-amd64/Packages.gz
- 8a794e5db6a7af03bec849f9ea600b8f 189 main/binary-amd64/Release
+ bda9429fc3a38e6b3d0429d8f44d7371 470 main/binary-i386,amd64/Packages
+ 9252cf71d8e5a6d7b77a9b85b1672a44 344 main/binary-i386,amd64/Packages.gz
+ b901db6e6b1cd143ac1951305edfd774 194 main/binary-i386,amd64/Release
 SHA1:
- f978146793f8bb3ca5c61ad68a8e18bf6f02bfff 470 main/binary-amd64/Packages
- 7a3f7c9e00253e4a27507d6c2a23c79d7e9a9554 344 main/binary-amd64/Packages.gz
- 7f65ced543b9a370159b7ac9456e715c0f2e8508 189 main/binary-amd64/Release
+ f978146793f8bb3ca5c61ad68a8e18bf6f02bfff 470 main/binary-i386,amd64/Packages
+ 7a3f7c9e00253e4a27507d6c2a23c79d7e9a9554 344 main/binary-i386,amd64/Packages.gz
+ 8056165703de34c80a08c4e0d89b49d32eab4c20 194 main/binary-i386,amd64/Release
 SHA256:
- fb0eb330a3d2d0d5cb83600e0d12fab2eab232fdc7377845273fc6fdcfd7deaa 470 main/binary-amd64/Packages
- 37296ab62102a3a4fd467dcaef445b415427627dd8e2d8bb16d35ca3ad44dba7 344 main/binary-amd64/Packages.gz
- f7065c9199431c001ec2ee6fb83b226320dc2b76f2c444939ff63ba62ae4eaff 189 main/binary-amd64/Release
+ fb0eb330a3d2d0d5cb83600e0d12fab2eab232fdc7377845273fc6fdcfd7deaa 470 main/binary-i386,amd64/Packages
+ 37296ab62102a3a4fd467dcaef445b415427627dd8e2d8bb16d35ca3ad44dba7 344 main/binary-i386,amd64/Packages.gz
+ e5d7718941f1f21ef5fc64a403f15d89adecd1db0f4866f760fb9df1050b4266 194 main/binary-i386,amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEE/y3z+bAhLaLu45TtRX4FqhUb4NgFAl6AEd8ACgkQRX4FqhUb
-4NgOwQ//XOzm2h3cgmAMeRpRyPu7nEUOrQZAjQM9L12T1K+JINoG21nsUFO8PAyN
-rCn/BLxRUnbxvSLu9AGX2oBGCZ6iLwQrpx35Z5PfmSSB4SZAycf4ujBgsQjv0tu/
-xPoi2kM7Xf9wYgtSkUaPnn8Cy+3ovGeoO12jMwuFTbSE4f+3wdUt1rl4HB2zw3Ny
-c5wfey6Ptd7PqRtiP/WzXrjCPgKHWh7zo1iXN1MaWhwMH0IOySZ1q+pGXko9xKlD
-wXBqDV+WFAdyfNzB6N7/7YJOobx2rFlro03xFeFM8bZn6D4lH1q5xcOQNEZ+14M3
-TCUlN2g1ItnRVF/E3r0wl9DLHJDrpEgkN+lMNrrKjx0mZc3770ehx4lnT7wsDnRt
-+ec17Br6Ad8IIsRd7LYK8mCbyKN/yKAVZlfg/V7OtBWINIj/CmFIUVPZ7mLigPkn
-2knIAgH/+Cz8XnULPpw3pwFzzEbXBwuJQ5QVsrm3PyukfGLcnlYkBjTvZTEjtEHb
-exxF7ebEw1neXV0+qgRy6X7q0GQi/JuJKlDAX33U8E3+8FTCH48biUbmRCs836QN
-/v51cBBpr1LtolZTfmZgtk0u3dnLgzbRiEi3XJ4wOhGSSe8I6tk5NzWTntikQXt1
-qBvLwHPbXiCURn2jdsuFtlZXL1nbubVZf/tMe02qCNJ8ev3bseY=
-=Sbdw
+iQIzBAEBCgAdFiEE/y3z+bAhLaLu45TtRX4FqhUb4NgFAl6AE8YACgkQRX4FqhUb
+4Nj2XA//asIB8+bqXgcf15XRfdkvpDvibWOCzuapV2RqTNzcgO+RBc98s67IyOmz
+rICmTIsB3FQIDO8i+U+LcdsRl1+lVxP+plz/JDluYrqIFgLRayhyJEkKhrgPv3wG
+pQ/1mSk9VUxWfLXM13XX7Vqqyd6Qi3M0EOgz122jfQL4hZalNgEOcq2SWagB1kp5
+TFrA3OHwcQC03oZB+kOm9rBshr0irpqthDtOh2ww7I72OZo0aVC79fcthNLQmSA5
+TT0boSALP+sa1D1A2s5LI/QNjYdRaY7VaaeXykE8iQloQW6ATQ1YDl0atO5UC6UT
+RkKs9AdcGB2I9Nbos+S1oMIRwGhu0LdUNiiCkXRtZr7fH7F6gJC0JfFr11UTLGla
+3SFEMogkTpeqg6SFzNeiZ2/QPxi4oUOTHcEnHlHCAOSPwCWY03S53ctww1PPZa2m
+juuuxLHjRWzA0KlvcJARw3+eeDxhgxtEvxDyWlfH8mUJmVIVSwuRQqLEhBWZsNWh
+Yj0XDMkaEE0TBWn7QKtZqI1ES9AUoHjjx3I+fb7FDvRy7IvERBVm0Hluw8P64HOI
+gRuaKiU+f0tjjpudaK7B7aeoROZewQUjKT0oKhO1dlpT+SuIRB74jJ90lm4Rtp98
+atd/BFdi+MPW+s8lx/OKmtLxWAS3hnnorejD5HiHOBAJlL5hKfk=
+=ydic
 -----END PGP SIGNATURE-----
