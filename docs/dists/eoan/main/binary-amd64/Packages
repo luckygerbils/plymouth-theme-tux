@@ -1,15 +1,15 @@
 Package: plymouth-theme-tux
-Version: 0.0-0
+Version: 0.0-1
 Architecture: all
 Depends:
 Maintainer: Sean Anastasi <sean@anasta.si>
 Priority: optional
 Section: base
-Filename: pool/main/p/plymouth-theme-tux/plymouth-theme-tux_0.0-0_all.deb
-Size: 5102478
-SHA256: 673f5a947d424048bc23a8f6e91fb3734c9535e911071208e5aad9b77c9fe650
-SHA1: 2f7a6e2dce0ab5e970a270b75bdb278d94f1231b
-MD5sum: d8fb3fad79e1c2b5044715223d7f86ca
+Filename: pool/main/p/plymouth-theme-tux/plymouth-theme-tux_0.0-1_all.deb
+Size: 5102940
+SHA256: dbf73e62719bda7b1219ffb8a87593bb137f1b31dc4749736a6cd3f12e61ec72
+SHA1: 3bea8b559e0b6a1d8416c2fd941c63b0e6563177
+MD5sum: d2701d5f5fd2a6168a26b7b6269f6069
 Description: Plymouth Theme Tux
  A plymouth theme with a classy tux logo.
 
