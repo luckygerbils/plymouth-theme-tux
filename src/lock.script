@@ -1,0 +1,17 @@
+#pragma once
+
+fun create_lock_icon(position, images) {
+    module.lock_sprite = Sprite(images.lock);
+    module.lock_sprite.SetX(position[0] - images.lock.GetWidth()/2);
+    module.lock_sprite.SetY(position[1]);
+    module.lock_sprite.SetZ(position[2]);
+    module.lock_sprite.SetOpacity(0);
+    
+    lock.show = show_lock;
+    lock.height = images.lock.GetHeight();
+    return lock;
+}
+
+fun show_lock() {
+    module.lock_sprite.SetOpacity(1);
+}

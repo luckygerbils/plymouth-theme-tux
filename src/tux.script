@@ -4,6 +4,7 @@
 #include "logo.script"
 #include "input.script"
 #include "message.script"
+#include "lock.script"
 #include "debug.script"
 
 fun create_splash() {
@@ -11,6 +12,7 @@ fun create_splash() {
     images.background = Image("background.png");
     images.input = Image("input.png");
     images.spinner = Image("spinner.png");
+    images.lock = Image("lock.png");
 
     screen_w = Window.GetWidth();
     screen_h = Window.GetHeight();
@@ -22,13 +24,16 @@ fun create_splash() {
     create_background([center_x, center_y, 0], images);
     // Logo 40px above center
     logo = create_logo([center_x, center_y - images.logo.GetHeight()/2 - 40, 1], images);
-    // Input 40px below center
-    input = create_input([center_x, center_y + 40, 1], images);
+    // Lock icon 10px below center
+    lock = create_lock_icon([center_x, center_y + 10, 1], images);
+    // Input 10px below lock icon
+    input = create_input([center_x, center_y + 10 + lock.height + 10, 1], images);
     // Messages 10px below input
     message_box = create_message_box([center_x, input.y + input.height + 10, 1]);
     
     splash.logo = logo;
     splash.input = input;
+    splash.lock = lock;
     splash.message_box = message_box;
     return splash;
 }
@@ -38,6 +43,7 @@ splash = create_splash();
 fun onDisplayPassword(prompt, stars) {
     splash.input.show(prompt, stars);
     splash.logo.hide_spinner();
+    splash.lock.show();
 }
 
 fun onDisplayNormal() {

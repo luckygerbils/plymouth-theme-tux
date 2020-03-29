@@ -53,8 +53,11 @@ ${PACKAGE}/DEBIAN/%: DEBIAN/%
 clean:
 	@rm -vr "${PACKAGE}" "${PACKAGE}.deb"
 
-install: ${PACKAGE}.deb
+deb-install: ${PACKAGE}.deb
 	@sudo dpkg -i "${PACKAGE}.deb"
+
+install: ${PACKAGE}
+	@sudo cp -rv "${PACKAGE}/${THEME_INSTALL_DIR}" "/${PLYMOUTH_DIR}"
 
 uninstall:
 	@sudo apt -y remove "${NAME}"
