@@ -5,7 +5,7 @@ Priority: optional
 Section: base
 Maintainer: Sean Anastasi <sean@anasta.si>
 Depends:
-Filename: https://github.com/luckygerbils/plymouth-theme-tux/releases/download/plymouth-theme-tux_0.0-4/plymouth-theme-tux_0.0-4.deb
+Filename: plymouth-theme-tux_0.0-4.deb
 Size: 5103278
 MD5sum: b4f25cd11edd5efd91f4b7e2c00f5331
 SHA1: 025fed91dcd898c5ce0bcf59b3fd80c76ef75009
