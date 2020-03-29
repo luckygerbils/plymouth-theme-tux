@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Sun, 29 Mar 2020 20:05:13 +0000
+MD5Sum:
+ 537f258b7fb6d653200f4b6f9f730075              666 Packages
+ e93cc127984f69ca1ea3ab51e95342c2              464 Packages.gz
+ b065fb952baf5a45c60d4291abb1a2a1               38 Release
+SHA1:
+ 4622099d056800a46ad1a28ffa575e72d862bd22              666 Packages
+ 5fe097270925e7b8d69f02d51c9f2c554ccd4723              464 Packages.gz
+ 4898080df29b8eef8d6b84c9dd935b0ee2d91f00               38 Release
+SHA256:
+ f7137cda373e7435a147a8ff4b172998737cbb2e6cf1abedc3d2245252557dfd              666 Packages
+ 10621fbfd231ea752e9823fae381b7a5f7191f07c4781c6c010d5a2108ffcbaa              464 Packages.gz
+ 21ee7e68e5eac5408c2549cf76e689a34aa940f4b05749daae47224d4b379f19               38 Release
+SHA512:
+ 026456c4b6701a360db1e42a1ed150c55ccf9034f51d0c10f242c637809ec4677f8cccf5515cb02287cc37b3ed99c82feebeabd32f8707edac9e891867ec94e7              666 Packages
+ 4c1daecb82a22c4388805dedf207c98123610b950fe0322e1a0caf1bd925d601d1f57b139854bbd6c3852554a6b3f6f002e3126e8b4ed41e036f8f4ac5dd2473              464 Packages.gz
+ 281f2e388116dfcbdf7ce065f638444c2e04c0d1b0ee2ab22d57ce749ce74fe1e3bd796cbbf514ce192b2603e8b9cbbfdfefacbc9c507b139671538eba65adfd               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE/y3z+bAhLaLu45TtRX4FqhUb4NgFAl6A/44ACgkQRX4FqhUb
+4NiBwRAApI9+f+fgrmCepWS7tOG9EnV33SvWjQ0h3xWScRjm0L3GAL5yGM0uipGM
+qxuppACY5PiCnk5pxiNfU1ckdS3uwnWRB4glAcztx+lKvCqRXn2aI8s3Ny2ampdK
+JTK44g2kKvErJjACcZPNf1xxZS30YKnyxoIlSR5qXLzd/oadTApI0Xb2sWSANTNx
+ptXU7Ex+82JOanXQAl2Sorx/iM3yOyA+lLYneeo+eqsvW0yZHHt1pI3buqZK1/mY
+a/hfwVSoxzXavRc62OoV/9I6jTDz9hrf/1ZmPXu/SjxmlXcy6CBmqiO/a3uZHVzM
+hT2x8i6UwYTbVlXFQcmd7etyM70R6Kq69oVlphVLVUt3FZECtcQJvr6DFh1dNdcO
+obmZoxmkBX6+z9RtZWhjmSbMypCTegkoxVu+1lvByGHkeG6DmArIdtfrBtRO2a8V
+wQm3d7DjFVk/s0scaff/uu1Pqv8Y5dWUkaCSSQwktFHwt5ingX4J2fwtSjMocwDL
+9vrvOTuKDXy0g/1s7vrwfBwJL9Bsr4ROcA411NYpoF84jAmWl2LSsr9tKnD3/vY+
+o44UvCku6XgO7HJLAM2hRgTz27UVfEW6IIcBhwyviv+vDwc/qpokyKBz464Wy5kb
+5UxmSjG4ni6Z/H4VlUHA0mPwCnIKB4Yuptj3TDYxX0I8EhQtzoU=
+=NAlQ
+-----END PGP SIGNATURE-----
