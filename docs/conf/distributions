@@ -1,7 +1,7 @@
 Origin: luckygerbils.github.io/plymouth-theme-tux
 Label: luckygerbils.github.io/plymouth-theme-tux
 Codename: eoan
-Architectures: amd64
+Architectures: i386,amd64
 Components: main
 Description: A plymouth theme with a classy tux logo.
 SignWith: 457E05AA151BE0D8
