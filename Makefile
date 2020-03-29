@@ -7,7 +7,8 @@ build: dist/tux.script \
 	dist/img/spinner.png \
 	dist/img/input.png \
 	dist/img/background.png \
-	dist/img/log_background.png
+	dist/img/log_background.png \
+	dist/img/lock.png
 
 dist/tux.script: $(wildcard src/*.script)
 	@mkdir -pv dist
@@ -19,15 +20,19 @@ dist/tux.plymouth: src/tux.plymouth
 
 dist/img/tux.png: src/img/tux.svg
 	@mkdir -pv dist/img
-	inkscape $< -o "$@" -w 202
+	inkscape $< -o "$@"
 
 dist/img/spinner.png: src/img/spinner.svg
 	@mkdir -pv dist/img
-	inkscape $< -o "$@" -w 220
+	inkscape $< -o "$@"
 
 dist/img/input.png: src/img/input.svg
 	@mkdir -pv dist/img
-	inkscape $< -o "$@" -w 270
+	inkscape $< -o "$@"
+
+dist/img/lock.png: src/img/lock.svg
+	@mkdir -pv dist/img
+	inkscape $< -o "$@"
 
 dist/img/background.png:
 	@mkdir -pv dist/img
@@ -36,6 +41,10 @@ dist/img/background.png:
 dist/img/log_background.png:
 	@mkdir -pv dist/img
 	convert -size 1x1 xc:black "$@"
+
+deb:
+	@cp -rv debian dist/
+	cd dist && dpkg-buildpackage
 
 clean:
 	@rm -vr dist
