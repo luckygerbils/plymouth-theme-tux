@@ -1,28 +1,28 @@
 Origin: luckygerbils.github.io/plymouth-theme-tux
 Label: luckygerbils.github.io/plymouth-theme-tux
 Codename: eoan
-Date: Sun, 29 Mar 2020 04:15:50 UTC
+Date: Sun, 29 Mar 2020 04:21:25 UTC
 Architectures: i386 amd64
 Components: main
 Description: A plymouth theme with a classy tux logo.
 MD5Sum:
- 45e2736f13b6252b6f4ac72fd285c4da 470 main/binary-i386/Packages
- cdf219d0912073bb5f73185ff587c6c6 343 main/binary-i386/Packages.gz
+ 0a7f358b65cf8ae792a52b9184ce29c0 470 main/binary-i386/Packages
+ eea0f77642e8de726e6147635d1f9410 344 main/binary-i386/Packages.gz
  49a831aeb8ecbb5cf290297f9ca723c2 188 main/binary-i386/Release
- 45e2736f13b6252b6f4ac72fd285c4da 470 main/binary-amd64/Packages
- cdf219d0912073bb5f73185ff587c6c6 343 main/binary-amd64/Packages.gz
+ 0a7f358b65cf8ae792a52b9184ce29c0 470 main/binary-amd64/Packages
+ eea0f77642e8de726e6147635d1f9410 344 main/binary-amd64/Packages.gz
  8a794e5db6a7af03bec849f9ea600b8f 189 main/binary-amd64/Release
 SHA1:
- 5102058ea1300bae4d38d0cf8c09c8d5b9c2f739 470 main/binary-i386/Packages
- 1f2f1d7f1f39fd818753d8ebb969f79f9719367c 343 main/binary-i386/Packages.gz
+ 4715501fff5bd20b572ebba8f7f2431be41ea7ea 470 main/binary-i386/Packages
+ 307dd1339aa22a3538fafec50ac2791dc661a972 344 main/binary-i386/Packages.gz
  771cb4f5d2666e4a2453817c1acdf036e9906a63 188 main/binary-i386/Release
- 5102058ea1300bae4d38d0cf8c09c8d5b9c2f739 470 main/binary-amd64/Packages
- 1f2f1d7f1f39fd818753d8ebb969f79f9719367c 343 main/binary-amd64/Packages.gz
+ 4715501fff5bd20b572ebba8f7f2431be41ea7ea 470 main/binary-amd64/Packages
+ 307dd1339aa22a3538fafec50ac2791dc661a972 344 main/binary-amd64/Packages.gz
  7f65ced543b9a370159b7ac9456e715c0f2e8508 189 main/binary-amd64/Release
 SHA256:
- 0c8fe7ccd83b697324dcc3b0eeb9aa41c04a013a3d735710fcf46ffdc1d25aec 470 main/binary-i386/Packages
- e1c1414674a2a6e902413dc9ff27757681e4efa09e3e1ac3691f2352adb5b247 343 main/binary-i386/Packages.gz
+ 81c93b49ffa606ecab83090436ff75c56abf6b54e4b4db8a6b4d73f0acd0b5fc 470 main/binary-i386/Packages
+ d273e635bb58ee4ff5dc245457bec246169d17cf347e4618fb1ceebde86a1507 344 main/binary-i386/Packages.gz
  4d907f681aecc5f17df8f1d1a338ea3835166d2e6742413d5a5794ea19532cdf 188 main/binary-i386/Release
- 0c8fe7ccd83b697324dcc3b0eeb9aa41c04a013a3d735710fcf46ffdc1d25aec 470 main/binary-amd64/Packages
- e1c1414674a2a6e902413dc9ff27757681e4efa09e3e1ac3691f2352adb5b247 343 main/binary-amd64/Packages.gz
+ 81c93b49ffa606ecab83090436ff75c56abf6b54e4b4db8a6b4d73f0acd0b5fc 470 main/binary-amd64/Packages
+ d273e635bb58ee4ff5dc245457bec246169d17cf347e4618fb1ceebde86a1507 344 main/binary-amd64/Packages.gz
  f7065c9199431c001ec2ee6fb83b226320dc2b76f2c444939ff63ba62ae4eaff 189 main/binary-amd64/Release
