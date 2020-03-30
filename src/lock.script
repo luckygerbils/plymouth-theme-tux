@@ -7,11 +7,23 @@ fun create_lock_icon(position, images) {
     module.lock_sprite.SetZ(position[2]);
     module.lock_sprite.SetOpacity(0);
     
-    lock.show = show_lock;
-    lock.height = images.lock.GetHeight();
-    return lock;
+    module.lock.show = show_lock;
+    module.lock.hide = hide_lock;
+    module.lock.height = images.lock.GetHeight();
+    module.lock.visible = 0;
+    return module.lock;
 }
 
 fun show_lock() {
-    module.lock_sprite.SetOpacity(1);
+    if (!module.lock.visible) {
+        module.lock_sprite.SetOpacity(1);
+        module.lock.visible = 1;
+    }
+}
+
+fun hide_lock() {
+    if (module.lock.visible) {
+        module.lock_sprite.SetOpacity(0);
+        module.lock.visible = 0;
+    }
 }

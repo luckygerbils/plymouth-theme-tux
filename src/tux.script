@@ -5,6 +5,7 @@
 #include "input.script"
 #include "message.script"
 #include "lock.script"
+#include "string.script"
 #include "debug.script"
 
 fun create_splash() {
@@ -35,6 +36,7 @@ fun create_splash() {
     splash.input = input;
     splash.lock = lock;
     splash.message_box = message_box;
+    splash.progress = 0;
     return splash;
 }
 
@@ -51,8 +53,15 @@ fun onDisplayNormal() {
     splash.logo.show_spinner();
 }
 
+fun onMessage(message) {
+    splash.message_box.show_message(message);
+    if (string_starts_with("cryptsetup:") && string_ends_with("set up successfully")) {
+        splash.lock.hide();
+    }
+}
+
 Plymouth.SetDisplayPasswordFunction(onDisplayPassword);
 Plymouth.SetDisplayNormalFunction(onDisplayNormal);
 Plymouth.SetRefreshFunction(splash.logo.update_spin);
-Plymouth.SetMessageFunction(splash.message_box.show_message);
+Plymouth.SetMessageFunction(onMessage);
 Plymouth.SetRootMountedFunction(onRootMounted);

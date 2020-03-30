@@ -1,0 +1,41 @@
+fun string_starts_with(str, prefix) {
+    len_str = string_length(str);
+    len_prefix = string_length(prefix);
+    
+    if (len_str < len_prefix) {
+        return 0;
+    }
+    
+    for (i = 0; i < len_prefix; i++) {
+        if (str.CharAt(i) != prefix.CharAt(i)) {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+fun string_ends_with(str, prefix) {
+    len_str = string_length(str);
+    len_prefix = string_length(prefix);
+    
+    if (len_str < len_prefix) {
+        return 0;
+    }
+    
+    for (i = 0; i < len_prefix; i++) {
+        if (str.CharAt(len_str - 1 - i) != prefix.CharAt(len_prefix - 1 - i)) {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+fun string_length(str) {
+    i = 0;
+    while (str.CharAt(i)) {
+        i++;
+    }
+    return i;
+}

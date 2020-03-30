@@ -28,11 +28,12 @@ fun create_input(position, images) {
     module.stars_sprite.SetOpacity(0);
     module.stars_sprite.SetZ(position[2] + 1);
     
-    input.show = show;
-    input.hide = hide;
-    input.y = module.position[1];
-    input.height = Image.Text("Sample Prompt", 1, 1, 1).GetHeight() + 10 + images.input.GetHeight();
-    return input;
+    module.input.show = show;
+    module.input.hide = hide;
+    module.input.visible = 0;
+    module.input.y = module.position[1];
+    module.input.height = Image.Text("Sample Prompt", 1, 1, 1).GetHeight() + 10 + images.input.GetHeight();
+    return module.input;
 }
 
 fun show(prompt, stars) {
@@ -62,14 +63,15 @@ fun show(prompt, stars) {
     module.stars_sprite.SetX(module.input_sprite.GetX() + 5);
     module.stars_sprite.SetY(module.input_sprite.GetY() + module.input_sprite.GetImage().GetHeight()/2 - stars_image.GetHeight()/2);
     
-    // Show all
     module.input_sprite.SetOpacity(1);
     module.prompt_sprite.SetOpacity(1);
     module.stars_sprite.SetOpacity(1);
+    module.input.visible = 1;
 }
 
 fun hide() {
     module.input_sprite.SetOpacity(0);
     module.prompt_sprite.SetOpacity(0);
     module.stars_sprite.SetOpacity(0);
+    module.input.visible = 0;
 }
