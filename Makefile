@@ -1,7 +1,7 @@
 PLYMOUTH_DIR=usr/share/plymouth/themes
 THEME_INSTALL_DIR=${PLYMOUTH_DIR}/tux
 NAME=plymouth-theme-tux
-VERSION=0.0-4
+VERSION=0.0-5
 PACKAGE=${NAME}_${VERSION}
 
 ${PACKAGE}.deb: ${PACKAGE}
@@ -62,7 +62,7 @@ install: ${PACKAGE}
 release: ${PACKAGE}.deb
 	@cp -v ${PACKAGE}.deb docs/${PACKAGE}.deb
 	@dpkg-sig -k FF2DF3F9B0212DA2EEE394ED457E05AA151BE0D8 --sign repo docs/${PACKAGE}.deb
-	@cd docs && apt-ftparchive packages plymouth-theme-tux_0.0-4.deb >Packages
+	@cd docs && apt-ftparchive packages ${PACKAGE}.deb >Packages
 	@gzip -c docs/Packages >docs/Packages.gz
 	@apt-ftparchive release docs >docs/Release
 	@gpg --default-key FF2DF3F9B0212DA2EEE394ED457E05AA151BE0D8 --clearsign -o docs/InRelease docs/Release
